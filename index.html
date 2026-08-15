@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#6d0f24" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Трек" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAGpElEQVR4nO2dPW7cSBCFSwtfYQHvJQysD+GrOBCwgTOdwJkDAQ72KjqEDegSa0CZEwdOHNAguCNVs3+qul71vA8O/DPSNKs+vm42OdbNzx/fhZCX+CN6AAQXykFUKAdRoRxEhXIQFcpBVCgHUaEcRIVyEBXKQVQoB1GhHESFchCVV9ED+B8fXr+NHkI8n759iR7Cb27Cb9lTiAKxooTJQSeaCLFkthx0YpCZlsyTg1oYMkeRSVcrNMOWOfV0Tw5q4YprhPgmB83wxrXCXslBLSbjESEuyUEz5uNRc3s5aEYU5pU3loNmxGJbf0s5aAYChl0wk4Nm4GDVCxs5aAYaJh0xkINmYDLeFz7sQ1RG5WBsIDPYnSE5aAY+Iz3itEJU+uVgbGShu1OdctCMXPT1i9MKUemRg7GRkY6uMTmICuUgKs1ycE7JS2vvmBxEhXKMcvdwGz0EL9oeMOaccsGFGR/ffY4aST31jyIzOSy5e7hdKUgoRz+aB8soQjm8WMCPBjm44GgFM0Lq+8jk6KS+64B+VEI5ZoAZIadQjnmk8yOTHFDF/fju8/ar6augDuGUNHJsZQUsbqsigIegkUOOY0Exi9ukCOYhPCeBHFlKKS2KpDgodDleLCJ4ZZfxA1qOQvnAK7uGH7hynBYOvLKVUwzyUYDKUVOyFPfHU/uBKMcyZmzk9QNRjlMSmbGRbsAbcHKcnkNJC306bMDwwJJjVTM20vmBJUeZ1GZs5DoEIDnQzpsQoIqAIsfaE8rG/dOjpJpcUOQos4wZlX6AACFH+VzJUsoCmxPH35cPCiQ8IORYm6MZ2t9gEi/H2rGheXD/9PjX3+8LX4gQHvFyLMxpQpT9CAdajuyxUQOyH8FyIISnE5ULi/++/qv9U3hxcJMjdWxUmvHPn2+QDzNSjvAzw4l6M05fE1si3ORIiqEZ4YDKgRy2BfrMgD1YUDkykmVrq54wORZbcNSb0TqhBBYKMTlgY1Zj3AzMQ0aUIxd+mREO5RhiYTOEcoywthkSJcdiq9Ey42ZElQsuOTCXZs8x3+wCPHA4OVKw0jZoAcrRzJWYIZSjlesxQyhHE1dlhlCOeta7dXLKCnJMaNvyWxovkl6O44eFXN+ihpXMkOxyPP+wkOtblFnMDEktx4QPC12zGZJUjvunx8KHhQzfpfKVS5ohGeU47dnky4pVzRBAOco3mSobP+7H/C0NwJuRMXJ032Sqb8aIH2ibXVH35OCS4xRvP9DMCCSfHOLpB804klIO8fGDZlyAKEfl0sy2SbG3TgBXoxIoh8kiq9IPw6vf+bER+IQYYnI0Me4HshmxgMrRFLMjfiCYgTmnCKwcrfT5gWAGMpFy2M6mrX6kMCP2kXTc5OgIW6v1acf37AZ2TpFwOaLOjBRbGuGfZMFNDvEMj8nfSgM5NgRcjj5MmnqdK9AL4uXw+F/AB1s7xwz8/7o5Xg4nuhvMzNiBkMPpRwggtxk/NgREjlOm+YEwoeCAIoffzy+q7zeIGSCxIThyiGdRaroOMgfhmCFQcpwyksbl3k8zI8uEsoElh+sPx9MMwDEDKjYETQ7x9+OowsUfXUlnhoi8ih5AD3cPtyOlnL+8yDWb7MAlh9SdQ4nKXTNUwNgQTDlkIT/ymiEiNz9/fK986YfXb12H8pzK9mMWF3nwn759qXkZaHJsVBYOMEKQzagHWg7J6ccaZgj4tLJT3/vYimcZZ+W0kkMOacyG+aUHH94Fq8kh7XPHnB5gjqrMgnJI79rCox84I+lgTTlkbO053pvYd7diWTk2TC5Ppm214WixsbgcAnb5WgDNDKmWI+WNt42t6MiKAGrRRMMmWKVuk4FtAOzA6vuYODl20CIEVotWVpBjA0GRZbTYWEeOjb09My1ZzImdhquVDbRrljLeiqTTomnhuFpyXHBsnpUo6YToZnE5jlw0Ncsd1ECapxXJNrOQndbNCPSHfUgglIOo9MiBuVVKynR0jclBVDrlYHjkoq9f/clBP7LQ3SlOK0RlSA6GBz4jPRpNDvqBzGB3OK0QFQM5GB6YjPfFJjnoBxomHTGbVugHDla9sFxz0A8EDLtgvCClH7HY1t/+aoV+RGFeeZdLWfoxH4+a9zwJVg+fGZuA36nouwnGCPHGtcK+ybHDCDFnwok3afucEWLLnHpOSo4dRsggM0+z2XLs0JImQqI3TI4dWlIgdjqOl+MIRZFoIY5gyUGg4MM+RIVyEBXKQVQoB1GhHESFchAVykFUKAdRoRxEhXIQFcpBVCgHUfkFi6gBsaOno7EAAAAASUVORK5CYII=" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Трек — задачи и аскеза</title>
+  <meta name="trek-build" content="single-file-v6-plum-reminders" />
+  <style>
+    :root{
+      --bg:#fbf7f2;--card:#fffdfa;--ink:#211b1b;--muted:#81736d;--wine:#6d0f24;--wine2:#8a1d37;
+      --gold:#c69a58;--gold2:#e6c98f;--line:#eadfd5;--soft:#f4ece5;--ok:#6d0f24;--shadow:0 14px 35px rgba(66,34,28,.09);
+      --radius:24px;--radius-sm:18px;--serif:ui-serif, Georgia, "Times New Roman", serif;--sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+    }
+    [data-theme="dark"]{--bg:#181315;--card:#211a1d;--ink:#fff8f2;--muted:#b9aaa4;--wine:#a93350;--wine2:#ca4766;--gold:#d6b16d;--gold2:#e5cf9c;--line:#3a2c31;--soft:#2b2226;--shadow:0 14px 35px rgba(0,0,0,.25)}
+    [data-theme="light"]{--bg:#ffffff;--card:#ffffff;--ink:#1d1d1f;--muted:#72727a;--wine:#7d1f36;--wine2:#982742;--gold:#b98b49;--gold2:#dcc08e;--line:#eee8e2;--soft:#f7f5f2}
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);min-height:100%;overscroll-behavior-y:none}
+    body{padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+    button,input,textarea,select{font:inherit;color:inherit}
+    button{cursor:pointer}
+    .app{max-width:560px;margin:0 auto;min-height:100vh;padding:16px 16px 108px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:4px 2px 14px;position:sticky;top:0;background:linear-gradient(var(--bg) 82%,transparent);z-index:5}
+    .date{font-family:var(--serif);font-size:16px;color:var(--muted)}
+    .hello{font-family:var(--serif);font-size:30px;margin:2px 0 0}
+    .iconbtn{width:42px;height:42px;border:1px solid var(--line);background:var(--card);border-radius:14px;display:grid;place-items:center;box-shadow:0 6px 18px rgba(60,30,25,.05)}
+    .screen{display:none;animation:fade .22s ease}.screen.active{display:block}@keyframes fade{from{opacity:.3;transform:translateY(5px)}to{opacity:1;transform:none}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero{padding:22px;display:grid;grid-template-columns:148px 1fr;gap:18px;align-items:center}
+    .ring{--p:0;position:relative;width:136px;height:136px;border-radius:50%;background:conic-gradient(var(--wine) calc(var(--p)*1%),var(--soft) 0);transition:background .6s ease}
+    .ring:before{content:"";position:absolute;inset:11px;border-radius:50%;background:var(--card)}
+    .ringtext{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:41px;color:var(--wine);z-index:2}
+    .hero h2{font-family:var(--serif);font-size:25px;margin:0 0 6px}.hero .big{font-family:var(--serif);font-size:48px;color:var(--wine);line-height:1}.hero .muted{color:var(--muted);margin-top:8px}.quote{text-align:center;font-family:var(--serif);font-style:italic;color:var(--muted);padding:20px 10px 16px}
+    .section-title{font-family:var(--serif);font-size:24px;margin:24px 4px 12px;display:flex;align-items:center;justify-content:space-between}
+    .section-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.section-card{padding:16px;min-height:118px;position:relative;overflow:hidden}.section-card .row{display:flex;align-items:center;gap:10px}.section-card .ico{width:38px;height:38px;border-radius:12px;background:var(--soft);display:grid;place-items:center;color:var(--wine);font-size:20px}.section-card h3{font-family:var(--serif);margin:0;font-size:20px}.section-card .count{font-family:var(--serif);color:var(--wine);font-size:19px;margin-top:14px}.progress{height:7px;background:var(--soft);border-radius:99px;overflow:hidden;margin-top:9px}.progress>i{display:block;height:100%;background:var(--wine);border-radius:99px;width:0;transition:width .45s ease}.fullwidth{grid-column:1/-1}
+    .askeza-card{padding:22px;background:linear-gradient(145deg,#56101f,#7b1730);color:#fff;border:none;position:relative;overflow:hidden}.askeza-card:after{content:"✦";position:absolute;right:18px;top:14px;color:var(--gold2);font-size:54px;opacity:.18}.askeza-card .label{letter-spacing:.16em;color:var(--gold2);font-size:13px}.askeza-card h2{font-family:var(--serif);font-size:27px;margin:8px 0}.askeza-card .days{font-family:var(--serif);font-size:24px;color:var(--gold2)}.askeza-card .progress{background:rgba(255,255,255,.18)}.askeza-card .progress i{background:linear-gradient(90deg,var(--gold2),#f3dda9)}.askeza-btn{margin-top:16px;width:100%;border:0;background:#fffaf6;color:#571020;border-radius:16px;padding:14px;font-weight:700}.empty-askeza{background:var(--card);color:var(--ink);border:1px dashed var(--gold);text-align:center}.empty-askeza:after{display:none}.empty-askeza h2{color:var(--wine)}
+    .stats-strip{margin-top:12px;padding:16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center}.stats-strip b{display:block;font-family:var(--serif);font-size:24px;color:var(--wine)}.stats-strip span{font-size:12px;color:var(--muted)}
+    .bottomnav{position:fixed;z-index:20;left:50%;transform:translateX(-50%);bottom:0;width:min(560px,100%);padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(transparent 0,var(--bg) 18%)}
+    .navbox{background:color-mix(in srgb,var(--card) 94%,transparent);border:1px solid var(--line);border-radius:24px;display:grid;grid-template-columns:1fr 1fr 74px 1fr 1fr;align-items:end;padding:8px 6px;box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+    .navitem{border:0;background:transparent;padding:5px 2px;color:var(--muted);font-size:11px;display:grid;place-items:center;gap:4px}.navitem .nicon{font-size:21px}.navitem.active{color:var(--wine);font-weight:700}.plus{width:62px;height:62px;border-radius:50%;border:3px solid var(--gold2);background:var(--wine);color:white;font-size:34px;display:grid;place-items:center;margin:-26px auto 0;box-shadow:0 10px 24px rgba(109,15,36,.28)}
+    .headerline{display:flex;align-items:center;justify-content:space-between;margin:6px 0 16px}.headerline h1{font-family:var(--serif);font-size:31px;margin:0}.back{border:0;background:transparent;color:var(--wine);font-size:30px;padding:6px}.smallbtn{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:10px 13px;color:var(--wine)}
+    .task-summary{padding:20px;display:flex;align-items:center;gap:14px;margin-bottom:16px}.task-summary .ico{font-size:28px}.task-summary h2{font-family:var(--serif);margin:0;font-size:24px}.task-list{display:grid;gap:10px}.task{padding:14px 14px;display:grid;grid-template-columns:36px 1fr auto;gap:10px;align-items:center;border-radius:18px}.check{width:30px;height:30px;border:2px solid var(--gold2);border-radius:50%;background:transparent;display:grid;place-items:center;transition:.25s}.task.done .check{background:var(--wine);border-color:var(--wine);color:white;transform:scale(.94)}.task.done .tname{text-decoration:line-through;color:var(--muted)}.badge{font-size:11px;padding:6px 8px;border-radius:10px;background:var(--soft);color:var(--wine)}.drag{color:var(--muted);font-size:18px}.addrow{margin-top:12px;width:100%;border:1px dashed var(--gold);background:transparent;border-radius:18px;padding:15px;color:var(--wine);font-weight:700}
+    .askeza-main{padding:22px;background:linear-gradient(145deg,#54101f,#7a1730);color:white;border:none}.askeza-main h2{font-family:var(--serif);font-size:30px;margin:8px 0}.askeza-main .meta{color:#eadbdc}.goal,.rules,.today-status,.calendar-card{padding:18px;margin-top:12px}.goal h3,.rules h3,.today-status h3,.calendar-card h3{font-family:var(--serif);font-size:22px;margin:0 0 12px}.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rule{padding:8px 0}.status-buttons{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.status-buttons button{border:1px solid var(--line);background:var(--card);padding:11px;border-radius:14px}.status-buttons button.active{background:var(--wine);color:white;border-color:var(--wine)}.daychips{display:flex;gap:8px;overflow:auto;padding-bottom:4px}.daychip{min-width:48px;text-align:center}.daychip .circle{width:38px;height:38px;margin:5px auto;border-radius:50%;display:grid;place-items:center;background:var(--soft);border:1px solid var(--line)}.daychip.good .circle{background:var(--wine);color:white}.daychip.partial .circle{background:var(--gold2);color:#4b3210}.daychip.bad .circle{border-color:#b56b6b;color:#8d2f2f}.daychip small{color:var(--muted)}
+    .progress-card{padding:18px;margin-bottom:12px}.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{padding:18px}.metric b{font-family:var(--serif);font-size:35px;color:var(--wine)}.metric span{display:block;color:var(--muted)}canvas{width:100%;height:180px;margin-top:8px}.seg{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--soft);border-radius:16px;padding:4px;margin-bottom:14px}.seg button{border:0;background:transparent;padding:9px;border-radius:13px}.seg button.active{background:var(--wine);color:white}.section-stat{padding:16px;margin-bottom:10px}.section-stat .top{display:flex;justify-content:space-between;align-items:center}.section-stat .top b{font-family:var(--serif);font-size:20px}.section-stat .top strong{color:var(--wine)}
+    .planner-date{display:flex;gap:8px;overflow:auto;padding-bottom:8px}.datebtn{min-width:54px;border:1px solid var(--line);background:var(--card);border-radius:16px;padding:10px 8px;text-align:center}.datebtn.active{background:var(--wine);color:white;border-color:var(--wine)}.plan-section{padding:16px;margin-top:12px}.plan-section h3{font-family:var(--serif);font-size:21px;margin:0 0 10px}.plan-task{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line)}.plan-task:last-child{border-bottom:0}.circle-empty{width:24px;height:24px;border:2px solid var(--gold2);border-radius:50%}
+    .setting-group{padding:16px;margin-bottom:12px}.setting-group h3{font-family:var(--serif);font-size:20px;margin:0 0 12px;color:var(--wine)}.theme-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.themeopt{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 8px;text-align:center}.themeopt.active{border-color:var(--wine);box-shadow:inset 0 0 0 1px var(--wine)}.setting-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.setting-row:last-child{border-bottom:0}.switch{width:48px;height:28px;border-radius:99px;background:var(--soft);border:1px solid var(--line);position:relative}.switch i{position:absolute;width:22px;height:22px;border-radius:50%;background:white;top:2px;left:2px;box-shadow:0 2px 6px rgba(0,0,0,.15);transition:.2s}.switch.on{background:var(--wine)}.switch.on i{left:22px}.danger{color:#a12c3f}.linkbtn{border:0;background:none;color:var(--wine);font-weight:700;padding:0}
+    .modal{position:fixed;inset:0;background:rgba(25,10,15,.32);backdrop-filter:blur(6px);display:none;align-items:flex-end;z-index:50}.modal.show{display:flex}.sheet{width:min(560px,100%);margin:0 auto;background:var(--bg);border-radius:28px 28px 0 0;padding:20px 16px calc(20px + env(safe-area-inset-bottom));max-height:88vh;overflow:auto;animation:up .25s ease}@keyframes up{from{transform:translateY(30%);opacity:.2}to{transform:none;opacity:1}}.sheet h2{font-family:var(--serif);font-size:27px;margin:0 0 16px}.field{display:grid;gap:6px;margin-bottom:12px}.field label{font-size:12px;color:var(--muted)}.field input,.field textarea,.field select{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:13px;outline:none}.field textarea{min-height:86px;resize:vertical}.primary{width:100%;border:0;background:var(--wine);color:white;border-radius:16px;padding:14px;font-weight:700}.secondary{width:100%;border:1px solid var(--line);background:var(--card);border-radius:16px;padding:13px;margin-top:8px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:112px;background:#271b1e;color:white;padding:11px 15px;border-radius:14px;z-index:100;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;bottom:126px}.sparkle{position:fixed;inset:0;pointer-events:none;display:none;z-index:70}.sparkle.show{display:block}.sparkle span{position:absolute;animation:pop .9s ease forwards;color:var(--gold);font-size:26px}@keyframes pop{0%{opacity:0;transform:scale(.3) translateY(10px)}40%{opacity:1}100%{opacity:0;transform:scale(1.4) translateY(-50px)}}
+    .reminders{padding:16px;margin:0 0 14px;border:1px solid color-mix(in srgb,var(--gold) 55%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--gold2) 20%,var(--card)),var(--card))}.reminders h3{font-family:var(--serif);font-size:20px;margin:0 0 10px}.reminder-item{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-top:1px solid var(--line)}.reminder-item:first-of-type{border-top:0}.reminder-dot{width:10px;height:10px;margin-top:5px;border-radius:50%;background:var(--wine);flex:0 0 auto}.reminder-item.tomorrow .reminder-dot{background:var(--gold)}.reminder-item b{display:block}.reminder-item small{color:var(--muted)}
+    .subhead{display:flex;align-items:center;justify-content:space-between;margin:22px 4px 10px}.subhead h2{font-family:var(--serif);font-size:24px;margin:0}.miniadd{border:1px solid var(--line);background:var(--card);color:var(--wine);border-radius:13px;padding:8px 11px;font-weight:700}
+    .askeza-list{display:grid;gap:10px}.askeza-mini{padding:17px;text-align:left;width:100%;color:inherit}.askeza-mini .top{display:flex;justify-content:space-between;gap:10px;align-items:start}.askeza-mini h3{font-family:var(--serif);font-size:21px;margin:0}.askeza-mini .meta{font-size:12px;color:var(--muted);margin-top:5px}.askeza-mini strong{color:var(--wine);font-family:var(--serif);font-size:20px}.askeza-selector{display:flex;gap:8px;overflow:auto;padding:0 0 10px}.askeza-selector button{white-space:nowrap;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:9px 12px}.askeza-selector button.active{background:var(--wine);color:#fff;border-color:var(--wine)}
+    .routine-list{display:grid;gap:10px}.routine-card{padding:16px}.routine-top{display:flex;justify-content:space-between;gap:10px;align-items:start}.routine-title{font-family:var(--serif);font-size:21px;margin:0}.routine-meta{font-size:12px;color:var(--muted);margin-top:4px}.routine-actions{display:flex;gap:8px;align-items:center;margin-top:12px}.routine-done{flex:1;border:0;background:var(--wine);color:#fff;border-radius:14px;padding:11px;font-weight:700}.routine-done.done{background:var(--soft);color:var(--wine)}.routine-value{display:grid;grid-template-columns:1fr auto;gap:8px;width:100%}.routine-value input{min-width:0;border:1px solid var(--line);background:var(--card);border-radius:13px;padding:11px}.routine-value button{border:0;background:var(--wine);color:#fff;border-radius:13px;padding:0 14px}.routine-edit{border:0;background:transparent;color:var(--muted);font-size:20px;padding:4px}.routine-next{margin-top:10px;color:var(--muted);font-size:13px}.routine-progressline{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:13px}.routine-progressline strong{color:var(--wine)}
+    .motivation-card{margin:14px 0;padding:18px 18px 17px;background:linear-gradient(145deg,rgba(109,15,36,.08),rgba(198,154,88,.10));border:1px solid rgba(109,15,36,.12);position:relative;overflow:hidden}.motivation-card:after{content:"♡";position:absolute;right:14px;top:4px;font-family:var(--serif);font-size:58px;color:var(--wine);opacity:.08}.motivation-kicker{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);font-weight:800;margin-bottom:7px}.motivation-text{font-family:var(--serif);font-size:20px;line-height:1.28;max-width:92%}.motivation-sub{font-size:12px;color:var(--muted);margin-top:9px}.tone-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px}.toneopt{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:11px 7px;font-weight:650;color:var(--ink)}.toneopt.active{background:var(--wine);border-color:var(--wine);color:#fff}.motivation-pop{position:fixed;left:14px;right:14px;bottom:112px;max-width:530px;margin:auto;background:linear-gradient(145deg,#fffaf6,#f5e9e1);color:#2d2022;border:1px solid #e4d1c4;border-radius:20px;padding:15px 17px;box-shadow:0 18px 50px rgba(46,19,26,.20);z-index:110;opacity:0;transform:translateY(16px) scale(.98);pointer-events:none;transition:.28s ease}.motivation-pop.show{opacity:1;transform:none;bottom:126px}.motivation-pop b{display:block;color:var(--wine);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}.motivation-pop span{font-family:var(--serif);font-size:18px;line-height:1.3;display:block}.head-clear{font-size:12px;color:var(--muted);margin-top:5px}.quote{line-height:1.4}
+    .routine-stat{padding:17px;margin-bottom:10px}.routine-stat h3{font-family:var(--serif);font-size:20px;margin:0 0 6px}.routine-stat .detail{color:var(--muted);font-size:13px}.routine-stat .value-big{font-family:var(--serif);font-size:27px;color:var(--wine);margin-top:8px}.field-hint{font-size:11px;color:var(--muted);line-height:1.35}.inline-note{font-size:12px;color:var(--muted);padding:10px 12px;background:var(--soft);border-radius:12px;margin-bottom:12px}
+    @media(max-width:390px){.hero{grid-template-columns:120px 1fr;padding:18px}.ring{width:112px;height:112px}.ringtext{font-size:34px}.hero .big{font-size:41px}.section-grid{grid-template-columns:1fr}.section-card.fullwidth{grid-column:auto}.stats-strip{grid-template-columns:1fr 1fr}.stats-strip>div:last-child{grid-column:1/-1}.theme-grid{grid-template-columns:1fr}.status-buttons{grid-template-columns:1fr}}
+  
+    /* v6 — более заметные светло-сливовые напоминания */
+    .reminders{
+      position:relative;
+      overflow:hidden;
+      padding:17px 17px;
+      margin:0 0 15px;
+      border:1px solid #d8b7c4;
+      background:
+        radial-gradient(circle at 92% 12%, rgba(255,255,255,.72) 0 10%, transparent 11%),
+        linear-gradient(135deg,#f5e8ee 0%,#efe0e8 55%,#f8eef2 100%);
+      box-shadow:0 12px 28px rgba(109,15,36,.10);
+      animation:reminderReveal .42s cubic-bezier(.2,.8,.2,1) both;
+    }
+    .reminders:after{
+      content:"";
+      position:absolute;
+      width:96px;height:96px;
+      right:-34px;top:-38px;
+      border-radius:50%;
+      background:rgba(109,15,36,.055);
+      pointer-events:none;
+    }
+    .reminders h3{
+      position:relative;
+      z-index:1;
+      font-family:var(--serif);
+      font-size:21px;
+      line-height:1.15;
+      margin:0 0 10px;
+      color:#5f1730;
+      font-weight:700;
+      letter-spacing:.005em;
+    }
+    .reminder-item{
+      position:relative;
+      z-index:1;
+      gap:11px;
+      padding:10px 0;
+      border-top:1px solid rgba(109,15,36,.11);
+    }
+    .reminder-item b{
+      display:block;
+      color:#3f2430;
+      font-weight:750;
+      line-height:1.3;
+      font-size:15px;
+    }
+    .reminder-item small{
+      display:block;
+      margin-top:3px;
+      color:#765b66;
+      font-weight:560;
+      line-height:1.35;
+      font-size:12.5px;
+    }
+    .reminder-dot{
+      width:11px;height:11px;
+      margin-top:5px;
+      background:#7a1f3c;
+      box-shadow:0 0 0 0 rgba(122,31,60,.22);
+      animation:reminderBreath 2.3s ease-in-out infinite;
+    }
+    .reminder-item.tomorrow .reminder-dot{
+      background:#b56a87;
+      animation-delay:.35s;
+    }
+
+    /* Всплывающие мотивационные карточки */
+    .toast{
+      max-width:min(520px,calc(100vw - 28px));
+      width:max-content;
+      text-align:center;
+      background:linear-gradient(135deg,#f3e3ea,#ead5df);
+      color:#4f1830;
+      border:1px solid #d5afbf;
+      box-shadow:0 16px 38px rgba(76,25,45,.18);
+      padding:13px 17px;
+      border-radius:17px;
+      font-weight:700;
+      line-height:1.32;
+      opacity:0;
+      bottom:108px;
+      transform:translateX(-50%) translateY(12px) scale(.97);
+      transition:opacity .22s ease,transform .28s cubic-bezier(.2,.85,.25,1),bottom .28s ease;
+    }
+    .toast.show{
+      opacity:1;
+      bottom:124px;
+      transform:translateX(-50%) translateY(0) scale(1);
+    }
+
+    @keyframes reminderReveal{
+      from{opacity:0;transform:translateY(8px) scale(.985)}
+      to{opacity:1;transform:translateY(0) scale(1)}
+    }
+    @keyframes reminderBreath{
+      0%,100%{box-shadow:0 0 0 0 rgba(122,31,60,.18);transform:scale(1)}
+      50%{box-shadow:0 0 0 7px rgba(122,31,60,0);transform:scale(1.08)}
+    }
+
+    [data-theme="dark"] .reminders{
+      border-color:#5b3a47;
+      background:linear-gradient(135deg,#35242b,#2d2025);
+      box-shadow:0 12px 28px rgba(0,0,0,.22);
+    }
+    [data-theme="dark"] .reminders h3{color:#f0d8e1}
+    [data-theme="dark"] .reminder-item{border-top-color:rgba(255,255,255,.08)}
+    [data-theme="dark"] .reminder-item b{color:#fff6f9}
+    [data-theme="dark"] .reminder-item small{color:#cbb5be}
+    [data-theme="dark"] .toast{
+      background:linear-gradient(135deg,#3a2630,#462a36);
+      color:#fff4f8;
+      border-color:#644352;
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .reminders,.reminder-dot,.toast{animation:none!important;transition:none!important}
+    }
+
+  </style>
+</head>
+<body>
+<div class="app" id="app" data-theme="cream">
+  <section class="screen active" id="todayScreen">
+    <div class="topbar"><div><div class="date" id="todayDate"></div><div class="hello">Доброе утро ✦</div></div><button class="iconbtn" id="menuBtn">☰</button></div>
+    <div class="card hero">
+      <div class="ring" id="todayRing"><div class="ringtext" id="ringText">0%</div></div>
+      <div><h2>Сегодня выполнено</h2><div class="big" id="todayPercent">0%</div><div id="todayCount">0 из 0 задач</div><div class="muted" id="todayLeft">Добавь первую задачу</div></div>
+    </div>
+    <div class="card motivation-card" id="motivationCard"><div class="motivation-kicker">Трек твоего спокойствия</div><div class="motivation-text" id="motivationText"></div><div class="motivation-sub" id="motivationSub">Всё записано. Ничего не держи в головушке.</div></div>
+    <div class="quote">✦ Всё записано. Ничего не держи в головушке — а то лопнет, и никому от этого хорошо не будет ✦</div>
+    <div id="reminderPanel"></div>
+    <div id="askezaPreview"></div>
+    <div id="routinePreview"></div>
+    <div class="section-title"><span>Разделы</span><button class="smallbtn" id="addSectionBtn">+ раздел</button></div>
+    <div class="section-grid" id="sectionGrid"></div>
+    <div class="card stats-strip" id="statsStrip"></div>
+  </section>
+
+  <section class="screen" id="tasksScreen">
+    <div class="headerline"><button class="back" data-go="today">‹</button><h1 id="taskScreenTitle">Раздел</h1><button class="smallbtn" id="taskEditSection">✎</button></div>
+    <div class="card task-summary" id="taskSummary"></div>
+    <div class="task-list" id="taskList"></div>
+    <button class="addrow" id="addTaskInline">＋ Добавить задачу</button>
+  </section>
+
+  <section class="screen" id="askezaScreen">
+    <div class="headerline"><button class="back" data-go="today">‹</button><h1>Аскезы</h1><button class="smallbtn" id="addAskeza">＋</button></div>
+    <div id="askezaContent"></div>
+  </section>
+
+  <section class="screen" id="progressScreen">
+    <div class="topbar"><div><div class="date" id="progressMonth"></div><div class="hello">Мой прогресс ✦</div></div><button class="iconbtn">◷</button></div>
+    <div class="seg"><button data-range="week">Неделя</button><button class="active" data-range="month">Месяц</button><button data-range="all">Всё время</button></div>
+    <div class="metric-row" id="metricRow"></div>
+    <div class="card progress-card"><h3 style="font-family:var(--serif);margin:0">Динамика выполнения</h3><canvas id="progressChart" width="500" height="200"></canvas></div>
+    <div id="sectionStats"></div>
+    <div class="section-title"><span>Регулярное</span></div>
+    <div id="routineStats"></div>
+  </section>
+
+  <section class="screen" id="planScreen">
+    <div class="topbar"><div><div class="date" id="planDateLabel"></div><div class="hello">Планирование</div></div><button class="iconbtn" id="planAdd">＋</button></div>
+    <div class="planner-date" id="plannerDates"></div>
+    <div id="plannerContent"></div>
+    <button class="addrow" id="addPlanTask">＋ Добавить задачу</button>
+  </section>
+
+  <section class="screen" id="settingsScreen">
+    <div class="topbar"><div><div class="date">Персонализация</div><div class="hello">Настройки ✦</div></div><span></span></div>
+    <div class="card setting-group"><h3>Внешний вид</h3><div class="theme-grid">
+      <button class="themeopt" data-theme-opt="light">Светлая</button><button class="themeopt" data-theme-opt="dark">Тёмная</button><button class="themeopt active" data-theme-opt="cream">Молочно-винная</button>
+    </div></div>
+    <div class="card setting-group"><h3>Характер Трека</h3><div style="color:var(--muted);font-size:13px;line-height:1.45">Как Трек будет с тобой разговаривать после галочек и на главной.</div><div class="tone-grid"><button class="toneopt active" data-tone="gentle">Нежный</button><button class="toneopt" data-tone="peppy">Бодрый</button><button class="toneopt" data-tone="humor">С юмором</button></div><div class="setting-row" style="margin-top:8px"><span>Тёплые фразы и похвала</span><button class="switch on" data-setting="showMotivation"><i></i></button></div></div>
+    <div class="card setting-group"><h3>Прогресс</h3>
+      <div class="setting-row"><span>Показывать процент на главной</span><button class="switch on" data-setting="showPercent"><i></i></button></div>
+      <div class="setting-row"><span>Считать только важные задачи</span><button class="switch" data-setting="importantOnly"><i></i></button></div>
+    </div>
+    <div class="card setting-group"><h3>Аскеза</h3>
+      <div class="setting-row"><span>Показывать на главной</span><button class="switch on" data-setting="showAskeza"><i></i></button></div>
+      <div class="setting-row"><span>Нарушение обнуляет серию</span><button class="switch" data-setting="askezaReset"><i></i></button></div>
+    </div>
+    <div class="card setting-group"><h3>Регулярные задачи</h3>
+      <div class="setting-row"><span>Показывать напоминания на главной</span><button class="switch on" data-setting="showReminders"><i></i></button></div>
+      <div class="setting-row"><span>Счётчик на иконке iPhone</span><button class="switch on" data-setting="appBadge"><i></i></button></div>
+      <div style="color:var(--muted);font-size:12px;line-height:1.45;padding-top:10px">Напоминания внутри «Трека» работают без сервера. Системные push-уведомления, которые приходят при полностью закрытом приложении, потребуют отдельного push-сервиса.</div>
+    </div>
+    <div class="card setting-group"><h3>Данные</h3>
+      <div class="setting-row"><span>Резервная копия</span><button class="linkbtn" id="exportBtn">Скачать</button></div>
+      <div class="setting-row"><span>Восстановить из файла</span><label class="linkbtn" for="importInput">Выбрать</label><input id="importInput" type="file" accept="application/json" hidden></div>
+      <div class="setting-row"><span class="danger">Очистить всё</span><button class="linkbtn danger" id="resetBtn">Сбросить</button></div>
+    </div>
+    <div class="card setting-group"><h3>Установка на iPhone</h3><div style="color:var(--muted);line-height:1.5">После публикации через GitHub Pages открой ссылку в Safari → «Поделиться» → «На экран Домой». Все задачи и прогресс сохраняются прямо на этом iPhone. Версия 4: женский «Трек твоего спокойствия», три характера, несколько аскез, регулярные задачи, напоминания и числовые трекеры.</div></div>
+  </section>
+</div>
+
+<div class="bottomnav"><div class="navbox">
+  <button class="navitem active" data-nav="today"><span class="nicon">⌂</span><span>Сегодня</span></button>
+  <button class="navitem" data-nav="progress"><span class="nicon">▥</span><span>Прогресс</span></button>
+  <button class="plus" id="globalPlus">＋</button>
+  <button class="navitem" data-nav="plan"><span class="nicon">▣</span><span>План</span></button>
+  <button class="navitem" data-nav="settings"><span class="nicon">⚙</span><span>Настройки</span></button>
+</div></div>
+
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div><div class="motivation-pop" id="motivationPop"><b>Трек твоего спокойствия</b><span id="motivationPopText"></span></div><div class="sparkle" id="sparkle"></div>
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const STORE='trek_tracker_v1';
+const icons=['💼','◉','📖','♡','✦','⌂','☀','◷','✎','◎','💉','⚖','💧','💊','🧘'];
+const weekdays=['Вс','Пн','Вт','Ср','Чт','Пт','Сб'];
+const localISO=(d=new Date())=>{const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`};
+const todayISO=()=>localISO();
+const fmtDate=(d,opts={day:'numeric',month:'long'})=>new Intl.DateTimeFormat('ru-RU',opts).format(new Date(d+'T12:00:00'));
+const uid=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36).slice(-4);
+let state=load(); let currentSection=null; let plannerDate=todayISO(); let progressRange='month'; let currentAskezaId=state.askezas[0]?.id||null;
+
+function seed(){return {version:4,theme:'cream',settings:{showPercent:true,importantOnly:false,showAskeza:true,askezaReset:false,showReminders:true,appBadge:true,showMotivation:true,motivationTone:'gentle'},sections:[
+  {id:'work',name:'Работа',icon:'💼'},{id:'body',name:'Я / тело',icon:'◉'},{id:'learn',name:'Обучение',icon:'📖'},{id:'personal',name:'Личное',icon:'♡'}],tasks:[],askezas:[],askezaLogs:{},routines:[],routineLogs:{}}}
+function load(){
+  try{
+    const raw=JSON.parse(localStorage.getItem(STORE)||'{}'), base=seed();
+    const out={...base,...raw,settings:{...base.settings,...(raw.settings||{})},sections:Array.isArray(raw.sections)?raw.sections:base.sections,tasks:Array.isArray(raw.tasks)?raw.tasks:[]};
+    out.askezas=Array.isArray(raw.askezas)?raw.askezas:[];
+    out.askezaLogs=raw.askezaLogs&&typeof raw.askezaLogs==='object'?raw.askezaLogs:{};
+    if(raw.askeza && !out.askezas.length){const id='legacy-askeza';out.askezas=[{id,...raw.askeza}];out.askezaLogs[id]=raw.askezaLog||{}}
+    out.routines=Array.isArray(raw.routines)?raw.routines:[];
+    out.routineLogs=raw.routineLogs&&typeof raw.routineLogs==='object'?raw.routineLogs:{};
+    out.version=4; return out;
+  }catch(e){return seed()}
+}
+function save(){state.version=4;localStorage.setItem(STORE,JSON.stringify(state));renderAll()}
+function screen(name){$$('.screen').forEach(x=>x.classList.remove('active'));$('#'+name+'Screen').classList.add('active');$$('.navitem').forEach(x=>x.classList.toggle('active',x.dataset.nav===name));window.scrollTo({top:0,behavior:'smooth'});if(name==='progress')renderProgress();if(name==='plan')renderPlanner();if(name==='settings')renderSettings();if(name==='askeza')renderAskeza()}
+function tasksFor(date=todayISO(),sectionId=null){return state.tasks.filter(t=>t.date===date && (!sectionId||t.sectionId===sectionId))}
+function countedTasks(date=todayISO(),sectionId=null){let a=tasksFor(date,sectionId);if(state.settings.importantOnly)a=a.filter(t=>t.important);return a}
+function percent(date=todayISO(),sectionId=null){const a=countedTasks(date,sectionId);if(!a.length)return 0;return Math.round(a.filter(t=>t.done).length/a.length*100)}
+const MOTIVATION={
+  gentle:{
+    empty:[
+      'Моя бусинка, всё выгружаем сюда. Головушка не склад — ей ещё жить, мечтать и придумывать прекрасное.',
+      'Всё записано. Ничего не держи в головушке. Выбирай одно маленькое дело — и начинаем спокойно.',
+      'Сегодня нам не нужно сделать всё сразу. Нам нужно сделать первое дело. Я рядом и всё помню.',
+      'Трек твоего спокойствия открыт. Каждое закрытое дело — чуть больше воздуха в голове.'
+    ],
+    start:[
+      'Ну всё. Лёд тронулся. Ты моя умничка. Первая галочка уже освободила кусочек головушки.',
+      'Вот так и делается большая жизнь — одной маленькой галочкой. Давай ещё одну, моя хорошая.',
+      'Первая есть. Видишь? Уже не так страшно. Продолжаем по одному делу.',
+      'Одна закрыта. Головушка уже может немножко выдохнуть.'
+    ],
+    quarter:[
+      'Смотри-ка, моя булочка, прогресс уже видно. Ещё одно дело — и станет совсем приятно.',
+      'Каждая такая галочка покупает тебе немного спокойствия на вечер.',
+      'Ты уже двигаешься. Не обесценивай это. По одной галочке — и шум в голове становится тише.',
+      'Моя сладкая бусинка, начало положено. Давай ещё одну маленькую победу.'
+    ],
+    half:[
+      'Половина дня уже закрыта. Ты вообще видела, какая ты молодец?',
+      'Половина сделана. Остальное теперь выглядит гораздо менее страшно, правда?',
+      'Ты уже очень много сделала. Давай ещё одну — чисто для красивого ощущения внутри.',
+      'Полпути есть. Чистая головушка уже маячит где-то совсем рядом.'
+    ],
+    almost:[
+      'Моя бусинка, ты почти закрыла день. Давай не бросать такую красоту.',
+      'Смотри на этот прогресс. Осталось совсем чуть-чуть — и можно спокойно выдыхать.',
+      'Ты уже сделала основное. Сейчас просто красиво дособираем день.',
+      'Ещё пара дел — и головушка официально получает отпуск.'
+    ],
+    last:[
+      'Моя сладкая булочка, до 100% буквально один маленький шаг.',
+      'Ещё одно дело — и всё. Закрываем лавочку и идём жить жизнь.',
+      'Последний рывочек без надрыва. Просто закрой её — и свободна.',
+      'Осталась одна. Давай её домой отправим, чтобы не ночевала в твоей головушке.'
+    ],
+    complete:[
+      '100%. Всё, моя хорошая. Головушка свободна. Можно идти отдыхать без внутреннего списка на 48 пунктов.',
+      'Ты сделала всё, что обещала себе сегодня. Вот это и есть доверие к себе.',
+      'Моя сладкая бусинка, день закрыт. Можно официально выдыхать.',
+      'Сегодня ты собрала себе спокойный вечер. Всё сделано. Ты умница.'
+    ],
+    task:[
+      'Вот. Ещё одно дело закрыто. В головушке стало посвободнее.',
+      'Ты моя умничка. Минус одна мысль, которую больше не надо таскать за собой.',
+      'Галочка стоит. Дело больше не живёт у тебя в голове бесплатно.',
+      'Ещё одна галочка в копилку спокойной женщины.'
+    ],
+    askeza:[
+      'Ещё один день ты выбрала себя. Засчитано, моя умница.',
+      'День аскезы закрыт. Тихо, спокойно, без драм — просто держим слово себе.',
+      'Сегодня снова получилось. Вот так и растёт доверие к себе.'
+    ],
+    regular:[
+      'Запланированное дело сделано. Теперь можно про него больше не помнить — я запомнила.',
+      'Регулярная штука закрыта. Месяц сразу выглядит аккуратнее.',
+      'Сделано вовремя. Вот это я понимаю — забота о будущей себе.'
+    ],
+    measure:[
+      'Записали цифру и пошли дальше. Это просто данные, моя хорошая.',
+      'Ещё одна точка на графике. Скоро будет очень приятно смотреть назад.',
+      'Значение сохранено. Тренд важнее одного дня.'
+    ]
+  },
+  peppy:{
+    empty:[
+      'Так, красавица. Всё из головы — сюда. Выбираем первое дело и поехали.',
+      'Головушка разгружена, список перед глазами. Никакой паники — только следующий шаг.',
+      'Сегодня работаем просто: увидела → сделала → закрыла → забыла.'
+    ],
+    start:[
+      'Первая есть. Отлично. Не теряем темп — берём следующую.',
+      'Старт дан. Одна задача уже не имеет над тобой власти.',
+      'Есть первая галочка. Дальше будет легче.'
+    ],
+    quarter:[
+      'Прогресс пошёл. Ещё одну — и цифра станет ещё приятнее.',
+      'Уже есть что показать самой себе. Продолжаем.',
+      'Хороший темп. Не думай про весь список — закрой следующую.'
+    ],
+    half:[
+      'Половина. Всё, большая часть психологического ужаса официально отменяется.',
+      '50% есть. Теперь просто дожимаем вторую половину без суеты.',
+      'Половина закрыта. Отличная работа. Следующая задача — вперёд.'
+    ],
+    almost:[
+      'Так. Уже почти всё. Не растягиваем удовольствие — закрываем остаток.',
+      'Финиш рядом. Осталось совсем немного — поднажмём.',
+      'Основное сделано. Сейчас чисто красиво закрываем день.'
+    ],
+    last:[
+      'Осталась одна. Закрываем — и точка.',
+      'Последняя задача. Давай её и свободна.',
+      'Финишная прямая. Одна галочка до полной тишины в голове.'
+    ],
+    complete:[
+      '100%. Всё закрыто. Отличная работа. Теперь отдых без переговоров с совестью.',
+      'День выполнен. Ты справилась со всем, что запланировала.',
+      'Готово. Список пуст, голова свободна, можно жить.'
+    ],
+    task:[
+      'Есть. Минус одна. Следующая?',
+      'Закрыто. Ещё один кусок дня под контролем.',
+      'Галочка. Отлично. Двигаемся дальше.'
+    ],
+    askeza:[
+      'День аскезы засчитан. Серия продолжается.',
+      'Есть. Ещё один день в твою дисциплину.',
+      'Отметка стоит. Ты держишь курс.'
+    ],
+    regular:[
+      'Регулярная задача закрыта. Всё по плану.',
+      'Сделано вовремя. Отлично, можно вычёркивать.',
+      'Есть отметка. Следующее выполнение — потом, сегодня свободна.'
+    ],
+    measure:[
+      'Цифра записана. Данные собираются — продолжаем.',
+      'Показатель сохранён. Ещё одна точка в динамике.',
+      'Есть значение. Смотрим на тренд, не на один день.'
+    ]
+  },
+  humor:{
+    empty:[
+      'Всё записано. Ничего не держи в головушке — а то лопнет, и никому от этого хорошо не будет.',
+      'Моя булочка с корицей, головушка не камера хранения. Сдавай задачи сюда.',
+      'Так. Внутренний диспетчер может снять смену. Я всё записала.',
+      'Не надо помнить 48 дел одновременно. Для этого у нас есть Трек, а у головушки — другие планы.'
+    ],
+    start:[
+      'Первая задача ушла в мир иной. Красиво начала.',
+      'Ну всё, процесс запущен. Головушка минус один квартирант.',
+      'Первая галочка есть. Сегодняшний хаос слегка приуныл.'
+    ],
+    quarter:[
+      'Смотри-ка, уже прогресс. А утром казалось, что там вообще конец света.',
+      'Каждая галочка — официальное выселение одной мысли из головушки.',
+      'Моя пироженка, ещё одно дело — чисто чтобы список понял, кто здесь хозяйка.'
+    ],
+    half:[
+      'Половина! Список задач начал нервничать.',
+      '50%. Головушка loading: режим «чистенько и красиво».',
+      'Половина закрыта. А мы ещё даже не применяли тяжёлую артиллерию.'
+    ],
+    almost:[
+      'Ооо, вот это уже серьёзно. Остатки списка делают вид, что их тут нет.',
+      'Моя бусинка, ещё чуть-чуть — и можно будет официально не думать ни о чём полезном.',
+      'Ты почти всё закрыла. Список сейчас тихо пишет завещание.'
+    ],
+    last:[
+      'ОДНА. Ну мы же не оставим её тут одну ночевать?',
+      'Последняя задача уже третий раз на тебя смотрит. Мне кажется, отношения пора прояснить.',
+      'Осталась одна штука. Давай добьём и освободим головушку окончательно.'
+    ],
+    complete:[
+      '100%. Булочка с корицей закончила рабочую смену. Прошу отдыхать.',
+      'Всё. Головушка свободна. Список задач побеждён и временно не представляет угрозы.',
+      'Ты закрыла всё. Можешь теперь лежать красиво и ни перед кем не оправдываться.',
+      '100%. Сегодня ты официально женщина, у которой всё под контролем. Хотя бы здесь.'
+    ],
+    task:[
+      'Вот. Ещё одно дело закрыто. Головушка стала на одну извилину просторнее.',
+      'Минус одна задача. Она больше не будет ходить за тобой по квартире.',
+      'Галочка поставлена. Внутренний тревожный секретарь может удалить одну заметку.',
+      'Ещё одно дело отправлено туда, где ему и место — в «сделано». '
+    ],
+    askeza:[
+      'День аскезы засчитан. Характер крепнет, корона держится.',
+      'Сегодня ты снова не договорилась сама с собой отменить всё. Уже победа.',
+      'Серия жива. Дисциплина делает вид, что всегда тут была.'
+    ],
+    regular:[
+      'Сделала регулярную задачу — теперь она может спокойно исчезнуть до следующего раза.',
+      'Редкая, но обязательная штука закрыта. Я отстану, обещаю.',
+      'Отметка есть. До следующего раза эта задача лишена права голоса.'
+    ],
+    measure:[
+      'Цифра записана. Без суда, следствия и драматической музыки.',
+      'Записали показатель. Весы/цифры высказались — мы пошли дальше.',
+      'Ещё одна точка на графике. Статистика довольна, можно жить.'
+    ]
+  }
+};
+function motTone(){return ['gentle','peppy','humor'].includes(state.settings.motivationTone)?state.settings.motivationTone:'gentle'}
+function motStage(done,total,p){const left=Math.max(0,total-done);if(!total)return'empty';if(p>=100)return'complete';if(left<=2&&p>=55)return'last';if(p>=70)return'almost';if(p>=45)return'half';if(p>=20)return'quarter';return'start'}
+function hashString(x){let h=2166136261;for(const ch of String(x)){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}return h>>>0}
+function pickStable(arr,key){return arr[hashString(key)%arr.length]}
+function pickRandom(arr){return arr[Math.floor(Math.random()*arr.length)]}
+function motPool(type,info={}){const bank=MOTIVATION[motTone()]||MOTIVATION.gentle;if(type==='today'){const st=motStage(info.done||0,info.total||0,info.p||0);return bank[st]||bank.start}return bank[type]||bank.task}
+function renderMotivationCard(done,total,p){const card=$('#motivationCard');if(!state.settings.showMotivation){card.style.display='none';return}card.style.display='block';const stage=motStage(done,total,p),pool=motPool('today',{done,total,p});$('#motivationText').textContent=pickStable(pool,`${todayISO()}|${motTone()}|${stage}|${done}`);const left=Math.max(0,total-done);$('#motivationSub').textContent=total===0?'Всё записывай сюда. Твоя головушка нужна для жизни, а не для хранения задач.':p===100?'Чистая головушка: 100%. На сегодня можно выдыхать.':`Чистая головушка: ${p}%. ${left?`Ещё ${left} ${left===1?'дело':left<5?'дела':'дел'} — и станет тише.`:'Всё закрыто.'}`}
+let motTimer=null;function motivate(type,info={}){if(!state.settings.showMotivation)return;const e=$('#motivationPop'),txt=pickRandom(motPool(type,info));$('#motivationPopText').textContent=txt;e.classList.add('show');clearTimeout(motTimer);motTimer=setTimeout(()=>e.classList.remove('show'),3600)}
+function renderAll(){document.documentElement.dataset.theme=state.theme==='cream'?'':state.theme;$('#app').dataset.theme=state.theme;renderToday();if(currentSection)renderTasks();renderAskeza();renderSettings();updateBadge()}
+
+function renderToday(){const d=todayISO();$('#todayDate').textContent=new Intl.DateTimeFormat('ru-RU',{weekday:'long',day:'numeric',month:'long'}).format(new Date()).replace(/^./,m=>m.toUpperCase());let a=countedTasks(d),done=a.filter(t=>t.done).length,p=a.length?Math.round(done/a.length*100):0;$('#todayRing').style.setProperty('--p',p);$('#ringText').textContent=p+'%';$('#todayPercent').textContent=p+'%';$('#todayCount').textContent=`${done} из ${a.length} задач`;$('#todayLeft').textContent=a.length? (a.length-done?`Осталось ${a.length-done}`:'День выполнен ✦'):'Добавь первую задачу';renderMotivationCard(done,a.length,p);
+  $('#sectionGrid').innerHTML=state.sections.map(s=>{let ts=countedTasks(d,s.id),dn=ts.filter(t=>t.done).length,sp=ts.length?Math.round(dn/ts.length*100):0;return `<button class="card section-card" data-sec="${s.id}" style="text-align:left;border:1px solid var(--line);color:inherit"><div class="row"><span class="ico">${s.icon}</span><h3>${esc(s.name)}</h3></div><div class="count">${dn} из ${ts.length}</div><div class="progress"><i style="width:${sp}%"></i></div></button>`}).join('');
+  $$('[data-sec]').forEach(b=>b.onclick=()=>{currentSection=b.dataset.sec;renderTasks();screen('tasks')});renderReminders();renderAskezaPreview();renderRoutinePreview();renderStatsStrip();
+}
+function renderStatsStrip(){let activeStreak=0;for(let i=0;i<370;i++){const dt=new Date();dt.setDate(dt.getDate()-i);const key=localISO(dt);const ts=countedTasks(key);if(ts.length&&ts.every(t=>t.done))activeStreak++;else if(i===0&&ts.length===0)continue;else break}const month=todayISO().slice(0,7);const mt=state.tasks.filter(t=>t.date.startsWith(month));const mp=mt.length?Math.round(mt.filter(t=>t.done).length/mt.length*100):0;const total=state.tasks.filter(t=>t.done).length;$('#statsStrip').innerHTML=`<div><b>${activeStreak}</b><span>идеальных дней подряд</span></div><div><b>${mp}%</b><span>за месяц</span></div><div><b>${total}</b><span>задач выполнено</span></div>`}
+
+// ----- АСКЕЗЫ -----
+function aLog(id){if(!state.askezaLogs[id])state.askezaLogs[id]={};return state.askezaLogs[id]}
+function askezaInfo(a){if(!a)return {day:0,progress:0,streak:0};const start=new Date(a.start+'T12:00:00'),now=new Date();let day=Math.floor((now-start)/86400000)+1;day=Math.max(1,Math.min(day,a.duration));let streak=0,log=aLog(a.id);for(let i=0;i<a.duration;i++){const d=new Date();d.setDate(d.getDate()-i);const k=localISO(d),v=log[k];if(v==='good')streak++;else if(i===0&&!v)continue;else if(v==='partial'&&!state.settings.askezaReset)continue;else break}const elapsed=Math.max(0,Math.min(a.duration,Math.floor((now-start)/86400000)+1));return {day,progress:Math.round(elapsed/a.duration*100),streak}}
+function renderAskezaPreview(){const el=$('#askezaPreview');if(!state.settings.showAskeza){el.innerHTML='';return}let html=`<div class="subhead"><h2>Аскезы</h2><button class="miniadd" id="addAskezaPreview">＋ добавить</button></div>`;if(!state.askezas.length){html+=`<button class="card askeza-card empty-askeza" id="createAskezaPreview" style="width:100%"><div class="label">АСКЕЗА</div><h2>Добавить свою аскезу</h2><div style="color:var(--muted)">Можно вести несколько одновременно</div></button>`}else html+=`<div class="askeza-list">${state.askezas.map(a=>{const i=askezaInfo(a),today=!!aLog(a.id)[todayISO()];return `<button class="card askeza-mini" data-open-askeza="${a.id}"><div class="top"><div><h3>✦ ${esc(a.title)}</h3><div class="meta">${i.day}/${a.duration} дней · 🔥 ${i.streak} подряд</div></div><strong>${i.progress}%</strong></div><div class="progress"><i style="width:${i.progress}%"></i></div><div class="meta" style="margin-top:8px">${today?'Сегодня отмечено ✓':'Сегодня ещё без отметки'}</div></button>`}).join('')}</div>`;el.innerHTML=html;$('#addAskezaPreview').onclick=()=>openAskezaForm();$('#createAskezaPreview')&&($('#createAskezaPreview').onclick=()=>openAskezaForm());$$('[data-open-askeza]').forEach(b=>b.onclick=()=>{currentAskezaId=b.dataset.openAskeza;screen('askeza')})}
+function renderAskeza(){const el=$('#askezaContent');if(!state.askezas.length){currentAskezaId=null;el.innerHTML=`<div class="card" style="padding:30px;text-align:center"><div style="font-size:48px">✦</div><h2 style="font-family:var(--serif)">Создай первую аскезу</h2><p style="color:var(--muted)">Теперь можно вести несколько аскез одновременно — у каждой свой срок, правила и история.</p><button class="primary" id="createAskeza">Создать аскезу</button></div>`;setTimeout(()=>{$('#createAskeza')&&($('#createAskeza').onclick=()=>openAskezaForm())},0);return}
+  let a=state.askezas.find(x=>x.id===currentAskezaId)||state.askezas[0];currentAskezaId=a.id;const info=askezaInfo(a),log=aLog(a.id),status=log[todayISO()]||'';let chips=[];for(let i=-6;i<=6;i++){const d=new Date();d.setDate(d.getDate()+i);const k=localISO(d),v=log[k]||'';chips.push(`<div class="daychip ${v}"><small>${new Intl.DateTimeFormat('ru-RU',{weekday:'short'}).format(d)}</small><div class="circle">${d.getDate()}</div></div>`)}
+  el.innerHTML=`<div class="askeza-selector">${state.askezas.map(x=>`<button data-select-askeza="${x.id}" class="${x.id===a.id?'active':''}">${esc(x.title)}</button>`).join('')}</div><div class="card askeza-main"><div style="display:flex;justify-content:space-between;gap:12px"><div><div style="letter-spacing:.14em;color:var(--gold2);font-size:13px">АСКЕЗА</div><h2>${esc(a.title)}</h2></div><button id="editCurrentAskeza" style="border:1px solid rgba(255,255,255,.35);background:transparent;color:white;border-radius:12px;padding:8px 11px;height:max-content">✎</button></div><div style="font-family:var(--serif);font-size:25px;color:var(--gold2)">${info.day}/${a.duration} дней</div><div class="progress"><i style="width:${info.progress}%;background:var(--gold2)"></i></div><div style="margin-top:14px">🔥 ${info.streak} дней подряд</div><div class="meta" style="margin-top:8px">${fmtDate(a.start)} — ${fmtDate(addDays(a.start,a.duration-1))}</div></div><div class="card goal"><h3>✦ Моя цель</h3><div>${esc(a.goal||'Пока не заполнено')}</div></div><div class="card rules"><h3>Правила</h3><div class="rules-grid"><div>${(a.allow||[]).map(x=>`<div class="rule">✓ ${esc(x)}</div>`).join('')||'<span style="color:var(--muted)">Что можно — не указано</span>'}</div><div>${(a.avoid||[]).map(x=>`<div class="rule">× ${esc(x)}</div>`).join('')||'<span style="color:var(--muted)">Что исключаем — не указано</span>'}</div></div></div><div class="card today-status"><h3>Сегодня</h3><div class="status-buttons"><button data-status="good" class="${status==='good'?'active':''}">✓ Соблюдаю</button><button data-status="partial" class="${status==='partial'?'active':''}">Частично</button><button data-status="bad" class="${status==='bad'?'active':''}">Нарушила</button></div></div><div class="card calendar-card"><h3>Последние дни</h3><div class="daychips">${chips.join('')}</div></div>`;
+  $$('[data-select-askeza]').forEach(b=>b.onclick=()=>{currentAskezaId=b.dataset.selectAskeza;renderAskeza()});$('#editCurrentAskeza').onclick=()=>openAskezaForm(a);$$('[data-status]').forEach(b=>b.onclick=()=>{aLog(a.id)[todayISO()]=b.dataset.status;save();if(b.dataset.status==='good'){toast('День засчитан ✦');motivate('askeza')}})
+}
+function openAskezaForm(a=null){const editing=!!a;showSheet(`<h2>${editing?'Изменить аскезу':'Новая аскеза'}</h2><div class="field"><label>Название</label><input id="fATitle" value="${attr(a?.title||'')}" placeholder="Например: 30 дней без сладкого"></div><div class="row2"><div class="field"><label>Старт</label><input id="fAStart" type="date" value="${a?.start||todayISO()}"></div><div class="field"><label>Дней</label><input id="fADuration" type="number" min="1" max="3650" value="${a?.duration||30}"></div></div><div class="field"><label>Моя цель</label><textarea id="fAGoal" placeholder="Ради чего ты это делаешь">${esc(a?.goal||'')}</textarea></div><div class="field"><label>Что можно — по одному пункту с новой строки</label><textarea id="fAAllow">${(a?.allow||[]).join('\n')}</textarea></div><div class="field"><label>Что исключаем — по одному пункту с новой строки</label><textarea id="fAAvoid">${(a?.avoid||[]).join('\n')}</textarea></div><button class="primary" id="saveAskeza">${editing?'Сохранить':'Создать аскезу'}</button>${editing?'<button class="secondary danger" id="finishAskeza">Удалить эту аскезу</button>':''}`);$('#saveAskeza').onclick=()=>{const title=$('#fATitle').value.trim();if(!title)return toast('Напиши название');const data={title,start:$('#fAStart').value,duration:Math.max(1,+$('#fADuration').value||30),goal:$('#fAGoal').value.trim(),allow:lines($('#fAAllow').value),avoid:lines($('#fAAvoid').value)};if(editing)Object.assign(a,data);else{const id=uid();state.askezas.push({id,...data});state.askezaLogs[id]={};currentAskezaId=id}closeSheet();save();screen('askeza')};if(editing)$('#finishAskeza').onclick=()=>{if(confirm('Удалить эту аскезу и её отметки?')){state.askezas=state.askezas.filter(x=>x.id!==a.id);delete state.askezaLogs[a.id];currentAskezaId=state.askezas[0]?.id||null;closeSheet();save();screen('askeza')}}}
+
+// ----- РЕГУЛЯРНЫЕ ЗАДАЧИ / ПОКАЗАТЕЛИ -----
+function rLog(id){if(!state.routineLogs[id])state.routineLogs[id]={};return state.routineLogs[id]}
+function isRoutineDue(r,iso){if(r.startDate && iso<r.startDate)return false;const d=new Date(iso+'T12:00:00');if(r.frequency==='daily')return true;if(r.frequency==='weekly')return d.getDay()===Number(r.weekday??0);if(r.frequency==='monthly')return d.getDate()===Math.min(Number(r.monthDay||1),new Date(d.getFullYear(),d.getMonth()+1,0).getDate());return false}
+function routineDone(r,iso){const v=rLog(r.id)[iso];return r.kind==='number'?v!==undefined&&v!==null&&v!=='':!!v}
+function nextDue(r,from=todayISO(),includeToday=true){let d=new Date(from+'T12:00:00');for(let i=includeToday?0:1;i<370;i++){const x=new Date(d);x.setDate(x.getDate()+i);const k=localISO(x);if(isRoutineDue(r,k))return k}return null}
+function occurrencesInMonth(r,monthKey){const [y,m]=monthKey.split('-').map(Number),last=new Date(y,m,0).getDate(),out=[];for(let day=1;day<=last;day++){const k=`${y}-${String(m).padStart(2,'0')}-${String(day).padStart(2,'0')}`;if(isRoutineDue(r,k))out.push(k)}return out}
+function routineMonthInfo(r,monthKey=todayISO().slice(0,7)){const dates=occurrencesInMonth(r,monthKey),done=dates.filter(k=>routineDone(r,k)).length,p=dates.length?Math.round(done/dates.length*100):0;return {dates,done,total:dates.length,progress:p}}
+function freqLabel(r){if(r.frequency==='daily')return 'каждый день';if(r.frequency==='weekly')return `каждое ${weekdayLong(r.weekday)}`;return `${r.monthDay}-го числа каждого месяца`}
+function weekdayLong(n){return ['воскресенье','понедельник','вторник','среду','четверг','пятницу','субботу'][Number(n)||0]}
+function renderRoutinePreview(){const el=$('#routinePreview');let html=`<div class="subhead"><h2>Регулярное</h2><button class="miniadd" id="addRoutinePreview">＋ добавить</button></div>`;if(!state.routines.length)html+=`<div class="card" style="padding:22px;text-align:center;color:var(--muted)">Добавь укол раз в неделю, ежедневное взвешивание, лекарства или любой повторяющийся показатель.</div>`;else html+=`<div class="routine-list">${state.routines.map(r=>routineCardHTML(r)).join('')}</div>`;el.innerHTML=html;$('#addRoutinePreview').onclick=()=>openRoutineForm();wireRoutineCards()}
+function routineCardHTML(r){const month=routineMonthInfo(r),due=isRoutineDue(r,todayISO()),done=routineDone(r,todayISO()),next=nextDue(r,todayISO(),false),log=rLog(r.id),val=log[todayISO()];let action='';if(due&&r.kind==='check')action=`<button class="routine-done ${done?'done':''}" data-routine-check="${r.id}">${done?'✓ Выполнено':'Отметить выполненным'}</button>`;if(due&&r.kind==='number')action=`<div class="routine-value"><input inputmode="decimal" data-routine-value="${r.id}" value="${val??''}" placeholder="${esc(r.unit||'значение')}"><button data-routine-save-value="${r.id}">Сохранить</button></div>`;return `<div class="card routine-card"><div class="routine-top"><div><h3 class="routine-title">${r.icon||'◎'} ${esc(r.name)}</h3><div class="routine-meta">${freqLabel(r)}${r.kind==='number'&&r.unit?` · ${esc(r.unit)}`:''}</div></div><button class="routine-edit" data-routine-edit="${r.id}">⋯</button></div><div class="routine-progressline"><span>За месяц: ${month.done}/${month.total}</span><strong>${month.progress}%</strong></div><div class="progress"><i style="width:${month.progress}%"></i></div>${action?`<div class="routine-actions">${action}</div>`:''}<div class="routine-next">${due?(done?'Сегодня уже отмечено':'Сегодня по плану'):(next?`Следующий раз: ${fmtDate(next,{weekday:'long',day:'numeric',month:'long'})}`:'')}</div></div>`}
+function wireRoutineCards(){$$('[data-routine-check]').forEach(b=>b.onclick=()=>{const r=state.routines.find(x=>x.id===b.dataset.routineCheck);rLog(r.id)[todayISO()]=!routineDone(r,todayISO());save();if(routineDone(r,todayISO())){toast('Отмечено ✓');motivate('regular')}else toast('Отметка снята')});$$('[data-routine-save-value]').forEach(b=>b.onclick=()=>{const r=state.routines.find(x=>x.id===b.dataset.routineSaveValue),inp=$(`[data-routine-value="${r.id}"]`),raw=inp.value.replace(',','.').trim(),v=Number(raw);if(!raw||Number.isNaN(v))return toast('Введи число');rLog(r.id)[todayISO()]=v;save();toast('Значение сохранено');motivate('measure')});$$('[data-routine-edit]').forEach(b=>b.onclick=()=>openRoutineForm(state.routines.find(x=>x.id===b.dataset.routineEdit)))}
+function renderReminders(){const el=$('#reminderPanel');if(!state.settings.showReminders||!state.routines.length){el.innerHTML='';return}const today=todayISO(),tomorrow=addDays(today,1),items=[];state.routines.forEach(r=>{if(isRoutineDue(r,today)&&!routineDone(r,today))items.push({when:'Сегодня',cls:'',r});else if((Number(r.reminderDaysBefore)||0)>=1&&isRoutineDue(r,tomorrow))items.push({when:'Завтра',cls:'tomorrow',r})});if(!items.length){el.innerHTML='';return}el.innerHTML=`<div class="card reminders"><h3>Напоминания</h3>${items.map(x=>`<div class="reminder-item ${x.cls}"><span class="reminder-dot"></span><div><b>${x.when}: ${esc(x.r.name)}</b><small>${freqLabel(x.r)}</small></div></div>`).join('')}</div>`}
+function updateBadge(){if(!state.settings.appBadge||!('setAppBadge' in navigator)){if('clearAppBadge' in navigator)navigator.clearAppBadge().catch(()=>{});return}const t=todayISO(),tm=addDays(t,1);let n=0;state.routines.forEach(r=>{if(isRoutineDue(r,t)&&!routineDone(r,t))n++;else if((Number(r.reminderDaysBefore)||0)>=1&&isRoutineDue(r,tm))n++});if(n)navigator.setAppBadge(n).catch(()=>{});else navigator.clearAppBadge().catch(()=>{})}
+function openRoutineForm(r=null){const editing=!!r;showSheet(`<h2>${editing?'Изменить':'Новая регулярная задача'}</h2><div class="inline-note">Подходит для уколов, взвешиваний, лекарств, измерений, тренировок и любых повторяющихся действий.</div><div class="field"><label>Название</label><input id="fRName" value="${attr(r?.name||'')}" placeholder="Например: Укол"></div><div class="row2"><div class="field"><label>Иконка</label><select id="fRIcon">${icons.map(i=>`<option ${i===(r?.icon||'◎')?'selected':''}>${i}</option>`).join('')}</select></div><div class="field"><label>Что отслеживать</label><select id="fRKind"><option value="check" ${r?.kind!=='number'?'selected':''}>Выполнение</option><option value="number" ${r?.kind==='number'?'selected':''}>Число / показатель</option></select></div></div><div id="numberFields"><div class="row2"><div class="field"><label>Единица</label><input id="fRUnit" value="${attr(r?.unit||'')}" placeholder="кг, мл, мм"></div><div class="field"><label>Цель (необязательно)</label><input id="fRGoal" inputmode="decimal" value="${attr(r?.goalValue??'')}" placeholder="Например 65"></div></div></div><div class="row2"><div class="field"><label>Повтор</label><select id="fRFreq"><option value="daily" ${r?.frequency==='daily'?'selected':''}>Каждый день</option><option value="weekly" ${(!r||r?.frequency==='weekly')?'selected':''}>Раз в неделю</option><option value="monthly" ${r?.frequency==='monthly'?'selected':''}>Раз в месяц</option></select></div><div class="field"><label>Начать с</label><input id="fRStart" type="date" value="${r?.startDate||todayISO()}"></div></div><div id="weeklyFields" class="field"><label>День недели</label><select id="fRWeekday">${weekdays.map((w,i)=>`<option value="${i}" ${i===Number(r?.weekday??0)?'selected':''}>${w}</option>`).join('')}</select></div><div id="monthlyFields" class="field"><label>День месяца</label><input id="fRMonthDay" type="number" min="1" max="31" value="${r?.monthDay||1}"></div><div class="field"><label>Напомнить заранее</label><select id="fRReminder"><option value="0" ${Number(r?.reminderDaysBefore||0)===0?'selected':''}>Только в день выполнения</option><option value="1" ${Number(r?.reminderDaysBefore||0)===1?'selected':''}>За 1 день</option><option value="2" ${Number(r?.reminderDaysBefore||0)===2?'selected':''}>За 2 дня</option><option value="3" ${Number(r?.reminderDaysBefore||0)===3?'selected':''}>За 3 дня</option><option value="7" ${Number(r?.reminderDaysBefore||0)===7?'selected':''}>За неделю</option></select><div class="field-hint">Напоминание появится на главном экране «Трека». Для системного push при закрытом приложении позже можно подключить сервер уведомлений.</div></div><button class="primary" id="saveRoutine">${editing?'Сохранить':'Добавить'}</button>${editing?'<button class="secondary danger" id="deleteRoutine">Удалить</button>':''}`);
+  const sync=()=>{const kind=$('#fRKind').value,f=$('#fRFreq').value;$('#numberFields').style.display=kind==='number'?'block':'none';$('#weeklyFields').style.display=f==='weekly'?'grid':'none';$('#monthlyFields').style.display=f==='monthly'?'grid':'none'};$('#fRKind').onchange=sync;$('#fRFreq').onchange=sync;sync();$('#saveRoutine').onclick=()=>{const name=$('#fRName').value.trim();if(!name)return toast('Напиши название');const data={name,icon:$('#fRIcon').value,kind:$('#fRKind').value,unit:$('#fRUnit')?.value.trim()||'',goalValue:$('#fRGoal')?.value.trim()===''?null:Number($('#fRGoal').value.replace(',','.')),frequency:$('#fRFreq').value,weekday:Number($('#fRWeekday').value),monthDay:Math.min(31,Math.max(1,Number($('#fRMonthDay').value)||1)),startDate:$('#fRStart').value,reminderDaysBefore:Number($('#fRReminder').value)||0};if(editing)Object.assign(r,data);else{const id=uid();state.routines.push({id,...data});state.routineLogs[id]={}}closeSheet();save();toast(editing?'Сохранено':'Регулярная задача добавлена')};if(editing)$('#deleteRoutine').onclick=()=>{if(confirm('Удалить эту регулярную задачу и её историю?')){state.routines=state.routines.filter(x=>x.id!==r.id);delete state.routineLogs[r.id];closeSheet();save();toast('Удалено')}}}
+
+function renderTasks(){const s=state.sections.find(x=>x.id===currentSection);if(!s)return;$('#taskScreenTitle').textContent=s.name;const ts=tasksFor(todayISO(),s.id),p=percent(todayISO(),s.id),done=ts.filter(t=>t.done).length;$('#taskSummary').innerHTML=`<div class="ico">${s.icon}</div><div style="flex:1"><h2>Сегодня выполнено</h2><div style="font-family:var(--serif);font-size:31px;color:var(--wine)">${done} из ${ts.length} задач</div><div class="progress"><i style="width:${p}%"></i></div></div><strong style="color:var(--wine)">${p}%</strong>`;$('#taskList').innerHTML=ts.length?ts.map(t=>`<div class="card task ${t.done?'done':''}" data-task="${t.id}"><button class="check" data-check="${t.id}">${t.done?'✓':''}</button><div><div class="tname">${esc(t.name)}</div>${t.important?'<span class="badge">✦ Важно</span>':''}</div><button class="drag" data-edit-task="${t.id}" style="border:0;background:transparent">⋯</button></div>`).join(''):`<div class="card" style="padding:24px;text-align:center;color:var(--muted)">Пока пусто. Добавь задачу — и прогресс начнёт считаться.</div>`;$$('[data-check]').forEach(b=>b.onclick=()=>toggleTask(b.dataset.check));$$('[data-edit-task]').forEach(b=>b.onclick=()=>openTaskForm(state.tasks.find(t=>t.id===b.dataset.editTask)))}
+function toggleTask(id){const t=state.tasks.find(x=>x.id===id);if(!t)return;const before=percent(t.date);t.done=!t.done;save();const after=percent(t.date);if(t.done){const ts=countedTasks(t.date),dn=ts.filter(x=>x.done).length,left=Math.max(0,ts.length-dn);motivate(after===100?'today':'task',{done:dn,total:ts.length,p:after,left});if(after===100&&before<100)sparkle()}else toast('Вернула в список. Ничего страшного — просто сделаем позже.')}
+function openTaskForm(task=null,date=plannerDate,sectionId=currentSection){const editing=!!task;const sid=task?.sectionId||sectionId||state.sections[0]?.id;showSheet(`<h2>${editing?'Изменить задачу':'Новая задача'}</h2><div class="field"><label>Задача</label><input id="fTaskName" value="${attr(task?.name||'')}" placeholder="Например: тренировка"></div><div class="row2"><div class="field"><label>Раздел</label><select id="fTaskSection">${state.sections.map(s=>`<option value="${s.id}" ${s.id===sid?'selected':''}>${esc(s.name)}</option>`).join('')}</select></div><div class="field"><label>Дата</label><input id="fTaskDate" type="date" value="${task?.date||date}"></div></div><div class="setting-row"><span>Важная задача</span><button class="switch ${task?.important?'on':''}" id="importantSwitch"><i></i></button></div><button class="primary" id="saveTask">${editing?'Сохранить':'Добавить'}</button>${editing?'<button class="secondary danger" id="deleteTask">Удалить задачу</button>':''}`);let imp=!!task?.important;$('#importantSwitch').onclick=()=>{imp=!imp;$('#importantSwitch').classList.toggle('on',imp)};$('#saveTask').onclick=()=>{const name=$('#fTaskName').value.trim();if(!name)return toast('Напиши задачу');if(editing){task.name=name;task.sectionId=$('#fTaskSection').value;task.date=$('#fTaskDate').value;task.important=imp}else state.tasks.push({id:uid(),name,sectionId:$('#fTaskSection').value,date:$('#fTaskDate').value,important:imp,done:false});closeSheet();save();toast(editing?'Сохранено':'Задача добавлена')};if(editing)$('#deleteTask').onclick=()=>{state.tasks=state.tasks.filter(x=>x.id!==task.id);closeSheet();save();toast('Задача удалена')}}
+function openSectionForm(sec=null){showSheet(`<h2>${sec?'Изменить раздел':'Новый раздел'}</h2><div class="field"><label>Название</label><input id="fSecName" value="${attr(sec?.name||'')}" placeholder="Например: Дом"></div><div class="field"><label>Иконка</label><select id="fSecIcon">${icons.map(i=>`<option ${i===sec?.icon?'selected':''}>${i}</option>`).join('')}</select></div><button class="primary" id="saveSec">Сохранить</button>${sec?'<button class="secondary danger" id="deleteSec">Удалить раздел</button>':''}`);$('#saveSec').onclick=()=>{const name=$('#fSecName').value.trim();if(!name)return toast('Напиши название');if(sec){sec.name=name;sec.icon=$('#fSecIcon').value}else state.sections.push({id:uid(),name,icon:$('#fSecIcon').value});closeSheet();save()};if(sec)$('#deleteSec').onclick=()=>{if(state.tasks.some(t=>t.sectionId===sec.id))return toast('Сначала перенеси или удали задачи');state.sections=state.sections.filter(s=>s.id!==sec.id);currentSection=null;closeSheet();save();screen('today')}}
+
+function renderProgress(){const now=new Date();$('#progressMonth').textContent=new Intl.DateTimeFormat('ru-RU',{month:'long',year:'numeric'}).format(now);let start=new Date(),end=new Date();if(progressRange==='week')start.setDate(end.getDate()-6);else if(progressRange==='month')start=new Date(end.getFullYear(),end.getMonth(),1);else{const ds=state.tasks.map(t=>new Date(t.date+'T12:00:00'));start=ds.length?new Date(Math.min(...ds)):new Date(end.getFullYear(),end.getMonth(),1)}let rangeTasks=state.tasks.filter(t=>{const d=new Date(t.date+'T12:00:00');return d>=start&&d<=end});const rp=rangeTasks.length?Math.round(rangeTasks.filter(t=>t.done).length/rangeTasks.length*100):0;const done=rangeTasks.filter(t=>t.done).length;$('#metricRow').innerHTML=`<div class="card metric"><b>${rp}%</b><span>выполнено</span></div><div class="card metric"><b>${done}</b><span>задач завершено</span></div>`;$('#sectionStats').innerHTML=state.sections.map(s=>{const a=rangeTasks.filter(t=>t.sectionId===s.id),p=a.length?Math.round(a.filter(t=>t.done).length/a.length*100):0;return `<div class="card section-stat"><div class="top"><b>${s.icon} ${esc(s.name)}</b><strong>${p}%</strong></div><div class="progress"><i style="width:${p}%"></i></div></div>`}).join('');renderRoutineStats(start,end);drawChart(start,end)}
+function renderRoutineStats(start,end){const el=$('#routineStats');if(!state.routines.length){el.innerHTML=`<div class="card" style="padding:20px;text-align:center;color:var(--muted)">Регулярных трекеров пока нет.</div>`;return}el.innerHTML=state.routines.map(r=>{const dates=[];for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)){const k=localISO(d);if(isRoutineDue(r,k))dates.push(k)}const done=dates.filter(k=>routineDone(r,k)).length,p=dates.length?Math.round(done/dates.length*100):0;let extra='';if(r.kind==='number'){const vals=Object.entries(rLog(r.id)).filter(([k,v])=>k>=localISO(start)&&k<=localISO(end)&&v!==''&&v!=null).sort((a,b)=>a[0].localeCompare(b[0]));if(vals.length){const first=Number(vals[0][1]),latest=Number(vals.at(-1)[1]),delta=latest-first;extra=`<div class="value-big">${fmtNum(latest)} ${esc(r.unit||'')}</div><div class="detail">За период: ${delta>0?'+':''}${fmtNum(delta)} ${esc(r.unit||'')}${r.goalValue!=null?` · цель ${fmtNum(r.goalValue)} ${esc(r.unit||'')}`:''}</div>`}}return `<div class="card routine-stat"><h3>${r.icon||'◎'} ${esc(r.name)}</h3><div class="detail">Выполнение: ${done}/${dates.length} · ${p}% · ${freqLabel(r)}</div><div class="progress"><i style="width:${p}%"></i></div>${extra}</div>`}).join('')}
+function drawChart(start,end){const c=$('#progressChart'),ctx=c.getContext('2d'),w=c.width,h=c.height;ctx.clearRect(0,0,w,h);const days=[];for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)){const k=localISO(d),ts=countedTasks(k);days.push(ts.length?Math.round(ts.filter(t=>t.done).length/ts.length*100):null)}let vals=days.map((v,i)=>v===null?(i?days.slice(0,i).reverse().find(x=>x!==null)??0:0):v);ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--line').trim();ctx.lineWidth=1;for(let y=0;y<=4;y++){ctx.beginPath();ctx.moveTo(8,15+y*(h-30)/4);ctx.lineTo(w-8,15+y*(h-30)/4);ctx.stroke()}ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--wine').trim();ctx.lineWidth=4;ctx.lineCap='round';ctx.beginPath();vals.forEach((v,i)=>{const x=10+(w-20)*(i/Math.max(1,vals.length-1)),y=h-15-(h-30)*(v/100);i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke();ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--gold').trim();vals.forEach((v,i)=>{if(i%Math.max(1,Math.floor(vals.length/8))===0||i===vals.length-1){const x=10+(w-20)*(i/Math.max(1,vals.length-1)),y=h-15-(h-30)*(v/100);ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fill()}})}
+function renderPlanner(){const base=new Date(plannerDate+'T12:00:00');$('#planDateLabel').textContent=fmtDate(plannerDate,{weekday:'long',day:'numeric',month:'long'});let arr=[];for(let i=-3;i<=5;i++){const d=new Date(base);d.setDate(base.getDate()+i);const k=localISO(d);arr.push(`<button class="datebtn ${k===plannerDate?'active':''}" data-pdate="${k}"><div>${new Intl.DateTimeFormat('ru-RU',{weekday:'short'}).format(d)}</div><b>${d.getDate()}</b></button>`)}$('#plannerDates').innerHTML=arr.join('');$$('[data-pdate]').forEach(b=>b.onclick=()=>{plannerDate=b.dataset.pdate;renderPlanner()});const ts=tasksFor(plannerDate);let html=state.sections.map(s=>{const a=ts.filter(t=>t.sectionId===s.id);if(!a.length)return'';return `<div class="card plan-section"><h3>${s.icon} ${esc(s.name)} <span style="float:right;color:var(--muted);font-family:var(--sans);font-size:13px">${a.length} задач</span></h3>${a.map(t=>`<div class="plan-task"><span class="circle-empty"></span><span>${esc(t.name)}</span></div>`).join('')}</div>`}).join('');const due=state.routines.filter(r=>isRoutineDue(r,plannerDate));if(due.length)html+=`<div class="card plan-section"><h3>◷ Регулярное</h3>${due.map(r=>`<div class="plan-task"><span class="circle-empty"></span><span>${r.icon||'◎'} ${esc(r.name)}${routineDone(r,plannerDate)?' ✓':''}</span></div>`).join('')}</div>`;$('#plannerContent').innerHTML=html||`<div class="card" style="padding:24px;text-align:center;color:var(--muted);margin-top:12px">На этот день пока ничего не запланировано.</div>`}
+function renderSettings(){$$('[data-theme-opt]').forEach(b=>b.classList.toggle('active',b.dataset.themeOpt===state.theme));$$('[data-setting]').forEach(b=>b.classList.toggle('on',!!state.settings[b.dataset.setting]));$$('[data-tone]').forEach(b=>b.classList.toggle('active',b.dataset.tone===motTone()))}
+function showSheet(html){$('#sheet').innerHTML=html;$('#modal').classList.add('show')}function closeSheet(){$('#modal').classList.remove('show')}function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1600)}function sparkle(){const s=$('#sparkle');s.innerHTML='';for(let i=0;i<14;i++){const x=document.createElement('span');x.textContent='✦';x.style.left=(10+Math.random()*80)+'%';x.style.top=(25+Math.random()*50)+'%';x.style.animationDelay=(Math.random()*.3)+'s';s.appendChild(x)}s.classList.add('show');setTimeout(()=>s.classList.remove('show'),1200)}
+function esc(x=''){return String(x).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}function attr(x=''){return esc(x)}function lines(s){return s.split(/\n+/).map(x=>x.trim()).filter(Boolean)}function addDays(iso,n){const d=new Date(iso+'T12:00:00');d.setDate(d.getDate()+n);return localISO(d)}function fmtNum(v){return Number(v).toLocaleString('ru-RU',{maximumFractionDigits:2})}
+
+$$('[data-nav]').forEach(b=>b.onclick=()=>screen(b.dataset.nav));$$('[data-go]').forEach(b=>b.onclick=()=>screen(b.dataset.go));$('#globalPlus').onclick=()=>showSheet(`<h2>Что добавить?</h2><button class="primary" id="quickTask">＋ Задачу</button><button class="secondary" id="quickRoutine">◷ Регулярную задачу / показатель</button><button class="secondary" id="quickAskeza">✦ Аскезу</button><button class="secondary" id="quickSection">＋ Раздел</button>`);$('#modal').onclick=e=>{if(e.target===$('#modal'))closeSheet()};document.addEventListener('click',e=>{if(e.target.id==='quickTask'){closeSheet();openTaskForm(null,todayISO(),state.sections[0]?.id)}if(e.target.id==='quickRoutine'){closeSheet();openRoutineForm()}if(e.target.id==='quickAskeza'){closeSheet();openAskezaForm()}if(e.target.id==='quickSection'){closeSheet();openSectionForm()}});$('#addSectionBtn').onclick=()=>openSectionForm();$('#addTaskInline').onclick=()=>openTaskForm(null,todayISO(),currentSection);$('#taskEditSection').onclick=()=>openSectionForm(state.sections.find(s=>s.id===currentSection));$('#addAskeza').onclick=()=>openAskezaForm();$('#addPlanTask').onclick=()=>openTaskForm(null,plannerDate,state.sections[0]?.id);$('#planAdd').onclick=()=>openTaskForm(null,plannerDate,state.sections[0]?.id);$('#menuBtn').onclick=()=>screen('settings');
+$$('[data-theme-opt]').forEach(b=>b.onclick=()=>{state.theme=b.dataset.themeOpt;save()});$$('[data-tone]').forEach(b=>b.onclick=()=>{state.settings.motivationTone=b.dataset.tone;save();motivate('task')});$$('[data-setting]').forEach(b=>b.onclick=()=>{state.settings[b.dataset.setting]=!state.settings[b.dataset.setting];save()});$$('[data-range]').forEach(b=>b.onclick=()=>{progressRange=b.dataset.range;$$('[data-range]').forEach(x=>x.classList.toggle('active',x===b));renderProgress()});
+$('#exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='trek-backup-'+todayISO()+'.json';a.click();URL.revokeObjectURL(a.href)};$('#importInput').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{localStorage.setItem(STORE,await f.text());state=load();currentAskezaId=state.askezas[0]?.id||null;save();toast('Данные восстановлены')}catch(err){toast('Не удалось прочитать файл')}};$('#resetBtn').onclick=()=>{if(confirm('Точно удалить все задачи, прогресс, аскезы и регулярные трекеры?')){state=seed();currentAskezaId=null;save();toast('Трекер очищен')}};
+plannerDate=todayISO();renderAll();renderPlanner();renderProgress();
+</script>
+</body>
+</html>
